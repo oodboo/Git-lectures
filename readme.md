@@ -171,3 +171,23 @@ git push -u origin master
 ```
 git push -f origin master
 ```
+
+### Delete Branch
+```
+git branch -d wrongbranchname
+git branch -D wrongbranchname
+```
+* To remove a remote branch (if you know what you are doing!)
+```
+git push origin :the_remote_branch
+```
+* or simply use the new syntax (v1.7.0)
+```
+git push origin --delete the_remote_branch
+```
+
+* perhaps someone else has already deleted the branch. Try to synchronize your branch list with
+```
+git fetch -p 
+```
+
